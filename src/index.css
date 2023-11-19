@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   ::-ms-reveal {
+      filter: invert(100%);
+   }
+   .container {
+      @apply h-full w-[1700px];
+   }
+   .btn {
+      @apply w-[40px] h-[40px] rounded-full overflow-hidden flex items-center justify-center active:bg-dark_hover_1;
+   }
+   .input {
+      @apply w-full dark:bg-dark_bg_2 p-2 dark:text-dark_text_1 rounded-lg flex-1 outline-none;
+   }
+   .overflow_scrollbar {
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+      overflow-x: hidden;
+   }
+}
+.animate-rotate {
+   animation: rotate 0.2s forwards;
+}
+@keyframes rotate {
+   0% {
+      transform: rotate(-90deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+.scrollbar::-webkit-scrollbar {
+   width: 5px;
+}
+.scrollbar::-webkit-scrollbar-track {
+   background: transparent;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+   background: #444e54;
+}
+li {
+   list-style: none;
+}
+.conversation {
+   height: calc(100vh - 220px);
+   overflow-y: auto;
+   overflow-x: hidden;
+}

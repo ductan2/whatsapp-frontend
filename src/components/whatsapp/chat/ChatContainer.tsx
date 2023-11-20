@@ -8,8 +8,10 @@ import ChatAction from "./ChatAction";
 import { UserOnlineContext } from "../../../context/UserOnlineContext";
 import { getConversationId } from "../../../utils/checkUser";
 import { IUser } from "../../../types/user.type";
-
-const ChatContainer = () => {
+type Props = {
+   callUser: () => void;
+};
+const ChatContainer = ({ callUser }: Props) => {
    const { active_conversation } = useSelector((state: RootState) => state.chat);
    const dispatch = useAppDispatch();
    const { user } = useSelector((state: RootState) => state.user);
@@ -35,6 +37,7 @@ const ChatContainer = () => {
                      ? true
                      : false
                }
+               callUser={callUser}
                conves={active_conversation}
             />
             <ChatMessages isTyping={active_conversation?._id === typing ? true : false} />

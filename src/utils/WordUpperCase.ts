@@ -1,4 +1,5 @@
 export const capitalizeName = (word: string) => {
+   if(!word) return "";
    let result = "";
    const temp = word.split(" ");
    temp.forEach((element) => {

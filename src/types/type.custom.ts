@@ -16,3 +16,11 @@ export type FileType = {
    type: string
    dataUrl: string
 }
+export type CallVideoType = {
+   socket_id: string,
+   receivingCall: boolean,
+   callEnded: boolean,
+   name: string,
+   signal: string,
+   avatar: string,
+}

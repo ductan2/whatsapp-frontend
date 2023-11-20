@@ -3,7 +3,7 @@ export interface IUser {
    name: string,
    email: string,
    status: string,
-   avatar?: string,
+   avatar: string,
    token: string
 }
 export interface AuthType {
